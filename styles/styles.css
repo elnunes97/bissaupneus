@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal */
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Duas imagens = 50% + 50% */
+.imagens {
+    display: flex;
+    width: 100%;
+}
+
+.imagens img {
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Botões sobrepostos */
+.social {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botões circulares com ícones */
+.btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Ícones */
+.icon {
+    width: 28px;
+    height: 28px;
+    filter: brightness(1.2);
+}
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    height: 60px;
+
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
