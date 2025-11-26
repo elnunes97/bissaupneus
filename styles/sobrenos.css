@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #333;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+.nav-logo {
+    height: 55px;
+    border-radius: 5px;
+    background: white;
+    padding: 4px;
+}
+
+/* HERO */
+.hero {
+    background: url('../images/siteemconstrucao.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content h2 {
+    margin-top: 25px;
+    color: #222;
+}
+
+.content p {
+    color: #444;
+    line-height: 1.6;
+}
+
+.content ul {
+    color: #444;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
