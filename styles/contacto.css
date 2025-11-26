@@ -1,133 +1,139 @@
+/* RESET */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f7f7f7;
+    background: #fafafa;
 }
 
 /* NAVBAR */
 .navbar {
-    background: #333;
-    padding: 12px 20px;
+    width: 100%;
+    background: #111;
+    padding: 10px 30px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.nav-link.active {
-    font-weight: bold;
-    border-bottom: 2px solid white;
 }
 
 .nav-logo {
     height: 55px;
-    background: white;
-    padding: 4px;
-    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffcc00;
 }
 
 /* HERO */
 .hero {
-    background: url('../images/siteemconstrucao.jpg') center/cover no-repeat;
-    color: white;
-    padding: 70px 20px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('../images/hero1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
     text-align: center;
-    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    color: #fff;
 }
 
-/* CONTACT GRID */
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* GRID CONTACT */
 .contact-container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+    justify-content: center;
 }
 
-/* INFO */
-.contact-info {
-    background: white;
+/* CARD STYLE */
+.card {
+    background: #fff;
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
 }
 
-.contact-info h2 {
-    margin-top: 0;
-}
-
-.link-whatsapp {
-    color: green;
-    font-weight: bold;
+/* LEFT INFO */
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
 }
 
 /* FORM */
 .contact-form {
-    background: white;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.contact-form h2 {
-    margin-top: 0;
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
-    border-radius: 5px;
+    margin: 8px 0 15px;
     border: 1px solid #ccc;
-    font-size: 15px;
+    border-radius: 6px;
 }
 
-.contact-form button {
+button {
     width: 100%;
-    padding: 12px;
-    background: #333;
+    background: #111;
+    color: #fff;
+    padding: 14px;
     border: none;
-    color: white;
+    border-radius: 6px;
     font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
+    transition: .3s;
 }
 
-.contact-form button:hover {
-    background: #000;
+button:hover {
+    background: #ffcc00;
+    color: #000;
 }
 
 /* MAPA */
 .map-container {
-    margin-top: 40px;
-    width: 100%;
+    padding: 0;
+    margin: 0 auto 40px;
+    width: 90%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.map-container iframe {
+iframe {
     width: 100%;
-    height: 350px;
+    height: 100%;
     border: none;
 }
 
 /* FOOTER */
 .footer {
-    background: #333;
-    color: white;
+    background: #111;
+    color: #fff;
     text-align: center;
     padding: 15px;
-    margin-top: 40px;
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
 }

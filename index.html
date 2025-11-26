@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página em Construção</title>
+    <title>Bissau Pneus — Venda e Serviços</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../bissaupneus/styles/styles.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 
+    <!-- NAV -->
     <nav class="navbar">
         <a href="index.html" class="logo-area">
-            <img src="../bissaupneus/images/logogbusiness.png" alt="logogbusiness" class="nav-logo">
+            <img src="../bissaupneus/images/logogbusiness.png" class="nav-logo" alt="Logo Bissau Pneus">
         </a>
 
         <div class="nav-links">
@@ -22,29 +26,116 @@
         </div>
     </nav>
 
-    <div class="container">
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Bissau Pneus</h1>
+            <p>Venda de pneus, montagem, balanceamento e manutenção rápida. Qualidade e confiança para o seu veículo.</p>
 
-        <div class="imagens">
-            <img src="../bissaupneus/images/siteemconstrucao.jpg" alt="Construção">
-            <img src="../bissaupneus/images/logogbusiness.png" alt="Google Business">
+            <a href="../bissaupneus/app/contacto.html" class="cta-btn">Fale Conosco</a>
         </div>
+        <img src="../bissaupneus/images/pneu.jpg" class="hero-img" alt="Pneus">
+    </header>
+
+    <!-- SECÇÃO DESTAQUES -->
+    <section class="destaques">
+        <h2>Nossos Serviços</h2>
+
+        <div class="grid">
+            <div class="card">
+                <img src="../bissaupneus/images/pneu1.jpg">
+                <h3>Venda de Pneus</h3>
+                <p>Pneus novos para viaturas ligeiras, pesadas e motas.</p>
+            </div>
+
+            <div class="card">
+                <img src="../bissaupneus/images/pneu2.jpg">
+                <h3>Montagem & Balanceamento</h3>
+                <p>Serviço rápido com equipamentos modernos.</p>
+            </div>
+
+            <div class="card">
+                <img src="../bissaupneus/images/pneu3.jpg">
+                <h3>Reparação de Pneus</h3>
+                <p>Remendo, calibragem e manutenção especializada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SWIPER PEQUENO -->
+    <section class="galeria">
+        <h2>Alguns Trabalhos Realizados</h2>
+
+        <div class="swiper smallSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../bissaupneus/images/logogbusiness.png"></div>
+                <div class="swiper-slide"><img src="../bissaupneus/images/pneu.jpg"></div>
+                <div class="swiper-slide"><img src="../bissaupneus/images/pneus.jpg"></div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER -->
+    <section class="porque">
+        <h2>Por que escolher a Bissau Pneus?</h2>
+
+        <ul>
+            <li>✔ Atendimento rápido e profissional</li>
+            <li>✔ Produtos de alta qualidade</li>
+            <li>✔ Preços competitivos</li>
+            <li>✔ Equipamentos modernos</li>
+            <li>✔ Garantia de satisfação</li>
+        </ul>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos">
+        <h2>O que os nossos clientes dizem</h2>
+
+        <div class="quote-box">
+            <p>"Atendimento top! Troquei os pneus do meu carro e ficou perfeito."</p>
+            <span>— Cliente Satisfeito</span>
+        </div>
+    </section>
+
+    <!-- CONTACTO RÁPIDO -->
+    <section class="contato-rapido">
+        <h2>Contato Rápido</h2>
 
         <div class="social">
             <a href="https://www.facebook.com/profile.php?id=61584362963918" class="btn">
                 <img src="../bissaupneus/images/facebook.png" class="icon" alt="Facebook">
             </a>
-
             <a href="https://wa.me/245957780807" class="btn">
                 <img src="../bissaupneus/images/whatsapp.png" class="icon" alt="WhatsApp">
             </a>
         </div>
+    </section>
 
-        <footer class="footer">
-            &copy; 2025 Bissau Pneus — Todos os direitos reservados.<br>
-            Imagens e mídias sociais por Bissau Pneus.
-        </footer>
+    <!-- FOOTER -->
+    <footer class="footer">
+        &copy; 2025 Bissau Pneus — Todos os direitos reservados.<br>
+        Imagens e mídias sociais por Bissau Pneus.
+    </footer>
 
-    </div>
+
+    <!-- SWIPER SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var smallSwiper = new Swiper(".smallSwiper", {
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: { delay: 2500 },
+            slidesPerView: 1,
+            spaceBetween: 20,
+        });
+    </script>
 
 </body>
 </html>

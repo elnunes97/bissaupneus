@@ -1,115 +1,288 @@
-/* Reset básico */
+/* =======================
+   RESET
+======================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Arial", sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #fff;
+    background: #f5f5f5;
+    color: #222;
 }
 
-/* NAVBAR */
+/* =======================
+   NAVBAR
+======================== */
 .navbar {
-    background-color: #222;
-    padding: 8px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 10;
-    border-bottom: 2px solid #444;
-}
-
-.logo-area {
+    padding: 12px 5%;
+    background: #ffffff;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 8px #00000015;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .nav-logo {
-    height: 55px;
-    border-radius: 5px;
-    padding: 5px;
-    background: #fff;
+    height: 60px;
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .nav-link {
-    color: #f2f2f2;
     text-decoration: none;
-    font-size: 17px;
+    color: #222;
     font-weight: 600;
     transition: 0.3s;
 }
 
 .nav-link:hover {
-    color: #ffcc00;
+    color: #ff9900;
 }
 
-/* LAYOUT PRINCIPAL */
-.container {
-    margin-top: 70px; /* evita que a navbar cubra o conteúdo */
-    position: relative;
-}
-
-/* Imagens lado a lado */
-.imagens {
+/* =======================
+   HERO
+======================== */
+.hero {
     display: flex;
-}
-
-.imagens img {
-    width: 50%;
-    height: 100vh;
-    object-fit: cover;
-    filter: brightness(0.9);
-}
-
-/* Redes sociais flutuantes */
-.social {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 18px;
-}
-
-.btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(0,0,0,0.55);
-    backdrop-filter: blur(6px);
-    display:flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    transition: transform 0.2s, background 0.3s;
+    padding: 5% 8%;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
 }
 
-.btn:hover {
-    transform: scale(1.15);
-    background: rgba(255,255,255,0.15);
+.hero-text {
+    width: 50%;
 }
 
-.icon {
-    width: 30px;
+.hero-text h1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #222;
 }
 
-/* Rodapé */
-.footer {
-    background-color: #222;
-    color: #bbb;
+.hero-text p {
+    font-size: 18px;
+    margin: 18px 0;
+    color: #555;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #ff9900;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #cc7a00;
+}
+
+.hero-img {
+    width: 420px;
+}
+
+/* =======================
+   SECÇÃO DESTAQUES
+======================== */
+.destaques {
+    padding: 60px 8%;
     text-align: center;
-    padding: 12px 5px;
+}
+
+.destaques h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 10px #00000010;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 18px #00000025;
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 12px 0;
+}
+
+/* =======================
+   SWIPER GALERIA
+======================== */
+.galeria {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.smallSwiper {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+}
+
+.smallSwiper img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* =======================
+   PORQUE ESCOLHER
+======================== */
+.porque {
+    background: white;
+    padding: 60px 8%;
+}
+
+.porque h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.porque ul {
+    list-style: none;
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.porque li {
+    margin: 12px 0;
+    padding-left: 10px;
+}
+
+/* =======================
+   DEPOIMENTOS
+======================== */
+.depoimentos {
+    padding: 60px 8%;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.quote-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #00000015;
+    max-width: 600px;
+    margin: auto;
+    font-style: italic;
+}
+
+.quote-box span {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+    font-style: normal;
+}
+
+/* =======================
+   CONTACTO RÁPIDO
+======================== */
+.contato-rapido {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.social {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn img {
+    width: 50px;
+    transition: 0.3s;
+}
+
+.btn img:hover {
+    transform: scale(1.1);
+}
+
+/* =======================
+   FOOTER
+======================== */
+.footer {
+    background: #111;
+    padding: 25px;
+    text-align: center;
+    color: #ddd;
     font-size: 14px;
-    border-top: 2px solid #444;
-    margin-top: -4px;
+    margin-top: 40px;
+}
+
+/* =======================
+   MOBILE RESPONSIVE
+======================== */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-img {
+        width: 260px;
+        margin-top: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-logo {
+        height: 45px;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+    }
 }
