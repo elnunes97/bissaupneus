@@ -1,77 +1,83 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f6f6f6;
-}
-
-/* NAVBAR */
-.navbar {
-    background: #333;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.nav-link.active {
-    font-weight: bold;
-    border-bottom: 2px solid white;
-}
-
-.nav-logo {
-    height: 55px;
-    border-radius: 5px;
-    background: white;
-    padding: 4px;
-}
-
-/* HERO */
-.hero {
-    background: url('../images/siteemconstrucao.jpg') center/cover no-repeat;
-    color: white;
+/* ==========================
+   HERO DA PÁGINA SOBRE NÓS
+========================== */
+.sobrenos-hero {
+    background: #ffffff;
+    padding: 60px 20px;
     text-align: center;
-    padding: 70px 20px;
-    text-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-/* TEXTO */
-.content {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.content h2 {
-    margin-top: 25px;
+.sobrenos-hero h1 {
+    font-size: 42px;
     color: #222;
 }
 
-.content p {
+.sobrenos-hero p {
+    font-size: 18px;
     color: #444;
-    line-height: 1.6;
+    margin-top: 10px;
 }
 
-.content ul {
-    color: #444;
-    line-height: 1.7;
+
+/* ==========================
+   CONTEÚDO PRINCIPAL
+========================== */
+.sobrenos-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 30px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* FOOTER */
-.footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
+.sobrenos-content .texto {
+    flex: 1;
+}
+
+.sobrenos-content h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #c38e3a;
+    font-size: 26px;
+}
+
+.sobrenos-content p {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sobrenos-content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.sobrenos-content li {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+
+/* IMAGEM LATERAL */
+.sobrenos-content .imagem img {
+    width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (max-width: 900px) {
+    .sobrenos-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobrenos-content .imagem img {
+        width: 80%;
+        margin: auto;
+    }
 }
