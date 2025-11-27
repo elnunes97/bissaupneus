@@ -4,8 +4,45 @@ body {
     font-family: Arial, sans-serif;
     background: #fafafa;
 }
+/* ==========================
+/* NAVBAR IGUAL AO INDEX */
+.navbar {
+    width: 100%;
+    padding: 12px 5%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px #00000015;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 
-/* NAVBAR */
+.nav-logo {
+    height: 60px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ff9900;
+}
+
+
+
+/* NAVBAR 
 .navbar {
     width: 100%;
     background: #111;
@@ -35,12 +72,12 @@ body {
 .nav-link.active {
     color: #ffcc00;
 }
-
+*/
 /* HERO */
 .hero {
     width: 100%;
     background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('../images/hero1.jpg');
+                url('../images/logogbusiness.png');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
